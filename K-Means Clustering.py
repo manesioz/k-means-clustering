@@ -1,8 +1,4 @@
 
-# coding: utf-8
-
-# In[1]:
-
 
 #example of k-means clustering (unsupervised ML) on dataset of customers and income
 import numpy as np 
@@ -10,9 +6,10 @@ import matplotlib.pyplot as plt
 import pandas as pd 
 import os
 
-os.chdir(r"C:\Users\Zack\OneDrive\Documents\Part 4 - Clustering\Section 24 - K-Means Clustering\14_page_p4s24_file_1\K_Means") 
+os.chdir(r"path-to-local-directory") 
 data_set = pd.read_csv('Mall_Customers.csv')
 X = data_set.iloc[:, [3, 4]].values 
+
 #Use elbow method to find optimal # of clusters 
 from sklearn.cluster import KMeans 
 wCSS = []
